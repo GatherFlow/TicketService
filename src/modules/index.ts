@@ -1,9 +1,6 @@
 import type { Routes } from '@/core/types/routes.js'
-import { getUsersRoutes } from './users/routes/index.js'
 
 export const getRoutes = (): Routes => {
-	const { routes: usersRoutes } = getUsersRoutes()
-
 	return {
 		routes: [
 			{
@@ -19,7 +16,6 @@ export const getRoutes = (): Routes => {
 					return reply.status(200).send(data)
 				},
 			},
-			...usersRoutes,
 		],
 	}
 }
