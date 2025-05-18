@@ -68,7 +68,7 @@ export class App {
 		})
 
 		await this.app.register(fastifySwaggerUi, {
-			routePrefix: '/api', // TODO: change to your prefix
+			routePrefix: '/',
 		})
 
 		await this.app.register(fastifyAwilixPlugin, {
@@ -105,7 +105,7 @@ export class App {
 
 				done()
 			},
-			{ prefix: '/api' },
+			{ prefix: '/' },
 		)
 	}
 
